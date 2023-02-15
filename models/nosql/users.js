@@ -1,6 +1,6 @@
-const mongoose = requiere("mongoose")
+const mongoose = require("mongoose")
 
-const UsersScheme = new mongoose.Shema(
+const UsersScheme = new mongoose.Schema(
   {
     name:{
         type: String
@@ -15,6 +15,9 @@ const UsersScheme = new mongoose.Shema(
       password:{
           type: String,
       },
+      artisit:{
+        type: String,
+    },
       role: {
           type: ["user", "admin"],
           default: "user",

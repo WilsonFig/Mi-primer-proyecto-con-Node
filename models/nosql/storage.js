@@ -1,6 +1,6 @@
-const mongoose = requiere("mongoose")
+const mongoose = require("mongoose")
 
-const StorageScheme = new mongoose.Shema(
+const StorageScheme = new mongoose.Schema(
   {
       url:{
         type: String
