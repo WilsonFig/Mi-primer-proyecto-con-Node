@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-
+const mongooseDelete = require("mongoose-delete")
 const UsersScheme = new mongoose.Schema(
   {
     name:{
@@ -31,4 +31,5 @@ const UsersScheme = new mongoose.Schema(
 
 //Exporta la conceccion con el esquema cuyo nombre corresponde a users
 //una coleccion es lo mismo que una tabla sql 
+UsersScheme.plugin(mongooseDelete, { overrideMethods: "all" });
 module.exports = mongoose.model("users", UsersScheme);

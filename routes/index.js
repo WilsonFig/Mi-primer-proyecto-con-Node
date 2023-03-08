@@ -13,7 +13,7 @@ fs.readdirSync(PATH_ROUTES).filter((file) => {
     const name = removeExtension(file)//TODO users, storage, tracks
     if(name !== 'index'){
     console.log(`Cargando rutan ${name}`)
-    router.use(`/${name}`, require(`./${file}`))
+    router.use(`/${name}`,require(`./${file}`))
     }
 })
 
